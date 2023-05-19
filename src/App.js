@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import toast, { Toaster } from 'react-hot-toast';
 
-function App() {
+// import Navigation from './components/Navigation'
+import Home from './components/Home';
+// import MyScreen from './components/Myscreen'
+// import {useSelector} from 'react-redux';
+// import Login from './components/Login';
+// import Layout from './components/Layout';
+// import Signup from './components/Signup';
+// const notify = () => {const toastId = toast.loading('Loading...');
+
+// toast.success('This worked', {
+//   id: toastId,
+// });
+// }
+const App = () => {
+  // const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+  // const newUser = useSelector(state => state.auth.newUser);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* {isLoggedIn && <Layout />}
+      {!isLoggedIn && !newUser && <Login />}
+      {!isLoggedIn && newUser && <Signup />} */}
+      <Home />
+      {/* <button onClick={notify}>Make me a toast</button> */}
+      <Toaster />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

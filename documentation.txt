@@ -1,0 +1,37 @@
+const { hasFormSubmit } = require('@testing-library/user-event/dist/utils')
+
+1. Created React Application using npx create-react-app (foody-appname )
+2. Open the application and start the application using npm start
+3. Integration with tailwind css:
+ a. npm install -D tailwindcss
+ b. npx tailwindcss init (Using this one tailwind config files is created)
+
+ c. config file: add template paths
+    /** @type {import('tailwindcss').Config} */
+    module.exports = {
+        content: [
+            "./src/**/*.{js,jsx,ts,tsx}",
+        ],
+        theme: {
+            extend: {},
+        },
+        plugins: [],
+    }
+
+d. Add the tailwind layers to the index 
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+ e. Adding custom font-family using @layer base{ } in the index.css
+    1.Robotoslab added here
+    2.Poppins added at tailwindconfig
+
+4. Install react-icons - npm install react-icons
+5. Create a new components to folder to organize all the components
+6. Create a Login component and make use in App component
+7. Install reacthookform to create Forms - npm install react-hook-form
+8. Install react-redux and reduxtoolkit
+    a.npm install @reduxjs/toolkit
+    b.npm install react-redux
+9. Configure store in index.js using Provider
